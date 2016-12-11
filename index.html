@@ -7,7 +7,23 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-   
+    <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+	<script>
+	
+	// Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBGcIVuJwpYmr5Eu81UZVNvDlHiI-pPV9Y",
+    authDomain: "chatfirebase-73f27.firebaseapp.com",
+    databaseURL: "https://chatfirebase-73f27.firebaseio.com",
+    storageBucket: "chatfirebase-73f27.appspot.com",
+    messagingSenderId: "1085267677865"
+  };
+  firebase.initializeApp(config);
+  //Variable con acceso a datos 
+  var TablaDeBaseDatos= firebase.database().ref('memes');
+		
+	</script>
+	
     
 </head>
 
