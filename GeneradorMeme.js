@@ -38,14 +38,7 @@ document.getElementById("fileMeme").onchange = function () {
     var reader = new FileReader();
     reader.onload = function (e) {
     document.getElementById("image").src = RedimencionarImagen(e.target.result, 568,335);
-	    
-	     TablaDeBaseDatos.push({
-             urlLarge:e.target.result,
-             url:RedimencionarImagen (e.target.result, 165, 165),
-	     textArriba:textArriba,
-		textAbajo:textAbajo     
-            });
-         
+	            
 	
          GenerarMeme();
 	
