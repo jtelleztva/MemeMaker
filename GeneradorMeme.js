@@ -45,7 +45,7 @@ document.getElementById("fileMeme").onchange = function () {
 	     textArriba:textArriba,
 		textAbajo:textAbajo     
             });
-         };  
+         
 	
          GenerarMeme();
 	
