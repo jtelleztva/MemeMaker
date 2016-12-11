@@ -1,7 +1,9 @@
 var canvas = document.getElementById("canvas");
+var textArriba;
+var textAbajo;
 function GenerarMeme(){
-			var textArriba=document.getElementById("txtTextoArriba").value;
-			var textAbajo=document.getElementById("txtTextoAbajo").value;
+			textArriba=document.getElementById("txtTextoArriba").value;
+			textAbajo=document.getElementById("txtTextoAbajo").value;
 			var ContextoCanvas = canvas.getContext("2d");
 			var ObjetoImagen = new Image();
 				ObjetoImagen.onload = function(){
@@ -36,6 +38,15 @@ document.getElementById("fileMeme").onchange = function () {
     var reader = new FileReader();
     reader.onload = function (e) {
     document.getElementById("image").src = RedimencionarImagen(e.target.result, 568,335);
+	    
+	     TablaDeBaseDatos.push({
+             urlLarge:e.target.result,
+             url:RedimencionarImagen (e.target.result, 165, 165),
+	     textArriba:textArriba,
+		textAbajo:textAbajo     
+            });
+         };  
+	
          GenerarMeme();
 	
     };reader.readAsDataURL(this.files[0]);
