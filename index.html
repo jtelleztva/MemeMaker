@@ -112,12 +112,28 @@
                 
                 </div>
                     </div>
+                    <a id="btnDescargar" value="Descargar" class="btn btn-danger">Descargar meme </a>
                 </div>
                 
             </div>
         </div>
     </div>
     <script src="GeneradorMeme.js"></script>
+    <script>
+    function downloadCanvas(link, canvasId, filename) {
+    link.href = document.getElementById(canvasId).toDataURL();
+    link.download = filename;
+}
+
+/** 
+ * The event handler for the link's onclick event. We give THIS as a
+ * parameter (=the link element), ID of the canvas and a filename.
+*/
+document.getElementById('btnDescargar').addEventListener('click', function() {
+    downloadCanvas(this, 'canvas', 'Meme.png');
+}, false);
+    </script>
+    
 </body>
 
 </html>
